@@ -1,0 +1,19 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+
+    <div class="card m-auto mt-5" style="width: 18rem;">
+        <img src="https://www.transparentpng.com/download/user/gray-user-profile-icon-png-fP8Q1P.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= user.name %></h5>
+          <p class="card-text"><%= user.email %></p>
+          <a href="/logout" class="btn btn-primary">Log Out</a>
+        </div>
+      </div>
+    
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
