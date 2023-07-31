@@ -1,6 +1,8 @@
 const axios = require ('axios');
 const controller = require('../controller/controller'); 
 
+
+
 exports.homeRoutes = (req,res) => {
     if(req.session.loggedIn && !req.session.isAdmin){
     res.render('index', {user: req.session.user});

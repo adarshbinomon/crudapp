@@ -6,8 +6,11 @@ const bodyparser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const { log, error } = require('console');
+const nocache = require('nocache')
 
 const app = express();
+
+app.use(nocache());
 
 dotenv.config({path: 'config.env'})
 const PORT = process.env.PORT ||8080
