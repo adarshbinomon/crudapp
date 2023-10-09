@@ -54,13 +54,13 @@ exports.findall = (req,res)=>{
         res.render('admin_dashboard', {users: User})
     })
     .catch(err =>{
-        res.status(500).send({message: err.message|| "Erros occured while retrieving user information"})
+        res.status(500).send({message: err.message|| "Error occured while retrieving user information"})
     }) 
 }
 
 //  retrieve and return a single user
 exports.findone = (req,res)=>{
-    // if(!req.query.id){
+        // if(!req.query.id){
         const id = req.params.id;
 
         Userdb.findById(id).lean()

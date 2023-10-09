@@ -1,11 +1,9 @@
-<!-- include header -->
-<%- include('include/_header') %>
-<!-- /include header -->
+
 <!-- include header -->
 <%- include('include/_header') %>
 <!-- /include header -->
 
-<section class="h-100" style="background-color: #d0cdcd;">
+<section class="h-100 bg-secondary.bg-gradient">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-10">
@@ -18,7 +16,7 @@
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
   
-                  <form action="/adminlogin" method="post">
+                  <form action="/adminlogin" method="post" id="login">
   
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
@@ -28,19 +26,19 @@
                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
   
                     <div class="form-outline mb-4">
-                      <input name = 'email' type="email" id="form2Example17" class="form-control form-control-lg" value="admin@mail.com" />
-                      <label class="form-label" for="form2Example17">Email address</label>
+                      <input name = 'email' type="text" id="email" class="form-control form-control-lg" placeholder="email" value="admin@mail.com" />
+                      <div class="error text-danger ms-2"></div>                    
                     </div>
   
                     <div class="form-outline mb-4">
-                      <input name = 'password' type="password" id="form2Example27" value="admin" class="form-control form-control-lg" />
-                      <label class="form-label" for="form2Example27">Password</label>
+                      <input name = 'password' type="password" id="password" placeholder="password" value="admin" class="form-control form-control-lg" />
+                      <div class="error text-danger ms-2"></div>
                     </div>
   
                     <div class="pt-1 mb-4">
                       <input  class="btn btn-dark btn-lg btn-block" type="submit"></input>
                       
-                      </div>
+                    </div>
   
                     
                   </form>
@@ -55,8 +53,6 @@
   </section>
 
 <!-- include footer -->
-<%- include('include/_footer') %>
-<!-- /include footer -->
-<!-- include footer -->
+<script src="/js/loginvalidation.js"></script>
 <%- include('include/_footer') %>
 <!-- /include footer -->
